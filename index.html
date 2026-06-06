@@ -1,2 +1,321 @@
 <h1>Едуард & Оксана</h1>
 <p>Наше весілля 11.07.2026</p>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Едуард & Оксана | 11.07.2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#f8f5f1;
+color:#4e4239;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+position:relative;
+cursor:pointer;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
+}
+
+.hero:hover img{
+transform:scale(1.05);
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.25);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.overlay h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+font-weight:500;
+}
+
+.overlay p{
+font-size:1.2rem;
+margin-top:15px;
+}
+
+#content{
+display:none;
+padding:40px 20px 80px;
+}
+
+.section{
+max-width:900px;
+margin:25px auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.section h2{
+font-family:'Cormorant Garamond',serif;
+font-size:2.4rem;
+margin-bottom:15px;
+text-align:center;
+}
+
+.section p{
+line-height:1.8;
+text-align:center;
+}
+
+.countdown{
+font-size:2rem;
+text-align:center;
+margin-top:15px;
+}
+
+.footer{
+text-align:center;
+padding:50px 20px;
+font-size:1.2rem;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+pointer-events:none;
+animation:fall linear infinite;
+z-index:999;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+@media(max-width:768px){
+
+.overlay h1{
+font-size:3rem;
+}
+
+.overlay p{
+font-size:1rem;
+}
+
+.section{
+padding:25px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero" onclick="openInvitation()">
+
+<img src="photo.jpg" alt="Едуард та Оксана">
+
+<div class="overlay">
+<h1>Едуард & Оксана</h1>
+
+<p>Натисніть на фото, щоб відкрити наше запрошення 🤍</p>
+</div>
+
+</section>
+
+<div id="content">
+
+<div class="section">
+
+<h2>Ми одружуємося 💍</h2>
+
+<p>
+Будемо щасливі розділити з вами один із найважливіших
+днів нашого життя.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>До весілля залишилось</h2>
+
+<div id="countdown" class="countdown"></div>
+
+</div>
+
+<div class="section">
+
+<h2>📍 Локація</h2>
+
+<p>
+Słoneczna 43A<br>
+42-248 Wola Mokrzeska
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>📅 Розклад</h2>
+
+<p>
+🏡 Заїзд гостей<br>
+10.07.2026 від 15:00
+</p>
+
+<br>
+
+<p>
+💍 Святкування<br>
+11.07.2026 близько 14:00–15:00
+</p>
+
+<br>
+
+<p>
+🚗 Виїзд гостей<br>
+13.07.2026 до 12:00
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🎉 Обов'язково взяти</h2>
+
+<p>😄 Гарний настрій</p>
+<p>❤️ Посмішку</p>
+<p>🥂 Бажання веселитися</p>
+<p>📸 Любов до фото</p>
+
+</div>
+
+<div class="section">
+
+<h2>✨ Невелике прохання</h2>
+
+<p>
+Залиште вдома поганий настрій,
+робочі турботи та поспіх.
+Ми хочемо провести цей вікенд
+разом легко, тепло та по-сімейному.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🤍 На вас чекає</h2>
+
+<p>🍽️ Смачні страви</p>
+<p>🎶 Музика та танці</p>
+<p>📸 Безліч фото</p>
+<p>❤️ Незабутні спогади</p>
+<p>🥂 Три дні святкування разом</p>
+
+</div>
+
+<div class="footer">
+
+<p>
+З любов'ю,<br><br>
+<strong>Едуард & Оксана</strong>
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function openInvitation(){
+
+document.getElementById('content').style.display='block';
+
+document.getElementById('content')
+.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
+function countdown(){
+
+const weddingDate =
+new Date("July 11, 2026 14:00:00");
+
+const now = new Date();
+
+const diff = weddingDate - now;
+
+const days =
+Math.floor(diff/(1000*60*60*24));
+
+const hours =
+Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+const minutes =
+Math.floor((diff%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+`${days} днів ${hours} год ${minutes} хв`;
+
+}
+
+setInterval(countdown,1000);
+
+countdown();
+
+for(let i=0;i<30;i++){
+
+let heart =
+document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="🤍";
+
+heart.style.left=
+Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(8+Math.random()*10)+"s";
+
+document.body.appendChild(heart);
+
+}
+</script>
+
+</body>
+</html>
